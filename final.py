@@ -10,7 +10,7 @@ from google.cloud import storage
 
 def scrapePresent(cid):
     headers = {
-        'authorization': 'NzYzMjA4ODU4NzIxMzIwOTkx.Gzf_Vj.qHjXRv25xHGbyaDxef8zYUha6mGhvrt2D_62bo'
+        'authorization': '' #discord auth omitted
     }
     r2 = requests.get(f'https://discord.com/api/v9/channels/{cid}/messages?limit=1', headers=headers)
     js2 = json.loads(r2.text)
@@ -34,9 +34,9 @@ def predict(text):
     
 current = 0
 positive, negative, neutral = 0, 0, 0
-variables = pd.read_csv('gs://mcst/variables.csv')
+variables = pd.read_csv('') #dataset path omitted
 cli = storage.Client()
-bucket = cli.bucket('mcst')
+bucket = cli.bucket('') #dataset path omitted
 blob = bucket.blob('variables.csv')
 while True:
     i = scrapePresent('726108367478849577')

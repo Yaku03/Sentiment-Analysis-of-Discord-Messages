@@ -6,7 +6,7 @@ import re
 def scrapePast(cid):
     x = ''
     headers = {
-        '' #insert auth token of discord account here
+        '' #discord auth token omitted
     }
     r = requests.get(f'https://discord.com/api/v9/channels/{cid}/messages?limit=100', headers=headers)
     js = json.loads(r.text)
@@ -27,7 +27,7 @@ def scrapePast(cid):
         for i in js[::-1]:
             if i['id'] != newestID:
                 print(i['content'], file=messageFile)
-            if i['id'] == '726108563193462934':
+            if i['id'] == '': #discord channel path omitted
                 break;
         messageFile.close()
         x -= 1
@@ -56,14 +56,6 @@ def filter():
         new_file.write(text)
         new_file.close()
 
-scrapePast('726108367478849577')
+scrapePast('') #discord channel path omitted
 filter()
 
-
-
-"""
-{'id': '1166161254226870282', 'type': 0, 'content': 'thats how you know its bad', 'channel_id': '726108367478849577', 'author': {'id': '357154426621788160', 'username': 'drew_burger', 'avatar': 'a9a05ac825c12398e14cad9b63154b27', 'discriminator': '0', 
-'public_flags': 64, 'premium_type': 0, 'flags': 64, 'banner': None, 'accent_color': 
-None, 'global_name': 'drew', 'avatar_decoration_data': None, 'banner_color': None}, 
-'attachments': [], 'embeds': [], 'mentions': [], 'mention_roles': [], 'pinned': False, 'mention_everyone': False, 'tts': False, 'timestamp': '2023-10-23T23:48:29.236000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': []}
-"""

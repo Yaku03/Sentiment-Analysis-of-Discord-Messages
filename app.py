@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify
 import pandas as pd
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "diesel-polymer-404717-23549847daf2.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "" #auth file path ommited
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ def index():
 
 @app.route('/get')
 def get():
-    df = pd.read_csv('gs://mcst/variables.csv')
+    df = pd.read_csv('') #dataset path omitted
     values = {
         'positive': int(df.at[0, "Value"]), 
         'negative': int(df.at[1, "Value"]), 

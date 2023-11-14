@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import pickle5 as pickle
 
-data = pd.read_csv('../Datasets/backup.csv')
+data = pd.read_csv('../Datasets/backup.csv') 
 data['value'] = data['sentiment'].apply(lambda x: 'positive' if x > 0
                                         else 'negative' if x < 0
                                         else 'neutral')
