@@ -19,4 +19,5 @@ Languages: Python, HTML, CSS, Javascript
 - Tensorflow, scikit-learn, and pandas used for creating the sentiment analysis model
 - Flask used as the backend framework for the webapp
 - Axios in JS for updating the counters in real time
-
+- Google Cloud Storage for hosting the databases and running a virtual machine to run the real-time scraper script.
+- Render.com used to host the web app
