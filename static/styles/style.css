@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&family=Roboto+Mono:wght@300;400&family=Space+Mono&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(132, 32, 44);
+    color: rgb(51, 21, 24);
+    font-family: 'Roboto Mono', monospace;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.header{
+    padding-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.header2{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+}
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+}
+
+.counter{
+    font-size: 60px;
+    margin-top: 10px;
+}
+.link-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+}
+.links{
+    color: rgb(51, 21, 24);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+.icons{
+    font-size: 30px;
+}
+.icon-cont{
+    display: flex;
+    justify-content: center;
+}
+#container{
+    position: relative;
+}
+
+#box{
+    box-sizing: border-box;
+    background-color: rgb(51, 21, 24);
+    width: 100%;
+    height: 24px;
+    top: 173px;
+    position: absolute;
+}  
+#scroll-text {
+    color:rgb(132, 32, 44);
+    box-sizing: border-box;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(500%);
+
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 500s linear infinite;
+    font-size: 20px;
+    top: 170px;
+    position: relative;
+}
+
+@-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+}
+
+@-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+    from {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    to {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-5400%);
+    }
+}
+
+@media(max-width: 500px){
+    body{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='styles/about.css') }}"> 
+    <title>About this Application</title>
+</head>
+<body>
+    <h1 class="header">About this Application</h1>
+    <br><br>
+    <div class="aboutcont">
+        <p class="aboutp">#missed-connections is a channel in Melee Online, a popular discord server for the game Super Smash Brothers Melee. </p>
+    </div>
+    <div class="aboutcont">
+        <p class="aboutp">This server aims to connect people through online matchmaking, and the #missed-connections channel allows people to reach out to others that they have just played, as the game itself provides very limited chat functionality.</p>
+    </div>
+    <div class="aboutcont">
+        <p class="aboutp">However the messages in this channel tend to get a bit, uh...</p>
+    </div>
+    <div>
+        <div class="box"></div>
+        <div class="aboutcont">
+            <p class="header2">freaky.</p>
+        </div>
+    </div>
+    <br><br>
+    <div class="aboutcont">
+        <p class="aboutp">Using a sentiment analysis model made with Python and TensorFlow, this website displays the number of positive, neutral, and negative messages that were said in the channel. The model analyzes the messages in real time.</p>
+    </div>
+    <div class="aboutcont">
+        <p class="aboutp">The website uses the Flask Python framework for the backend, and a simple .csv file as a databse to pull the sentiment counts from the model.</p>
+    </div>
+    <br><br><br>
+</body>
+</html>
