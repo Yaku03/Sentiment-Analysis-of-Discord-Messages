@@ -1,5 +1,5 @@
 # Sentiment-Analysis-of-Discord-Messages
-## CURRENTLY DOWN BECAUSE I DON'T HAVE MONEY TO KEEP THE DATABASE UP :(
+
 #### Some files/filepaths/values are omitted due to privacy reasons!
 
 This web application is a tracker for the amount of positive, negative, and neutral messages that are said in the #missed-connections channel of the Melee Online Discord. This can be adapted to any discord channel with any discord user.
